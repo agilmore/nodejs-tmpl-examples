@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+  body
+    h1= title
+    p A list of people:
+    if people
+      ul
+        each person in people
+          li= person
+    
+    p= An optional paragraph:
+    if optext
+      p= optext
+      
+    include footer

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>{title}</title>
+</head>
+<body>
+  <h1>{title}</h1>
+  <p>A list of people:</p>
+  {?people}
+    <ul>
+    {#people}
+      <li>{.}</li>
+    {/people}
+    </ul>
+  {/people}
+  
+  <p>An optional paragraph:</p>
+  {?optext}
+    <p>{optext}</p>
+  {/optext}
+  
+  {>footer /}
+</body>
+</html>

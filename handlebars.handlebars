@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>{{title}}</title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <p>A list of people:</p>
+  {{#if people}}
+    <ul>
+    {{#each people}}
+      <li>{{this}}</li>
+    {{/each}}
+    </ul>
+  {{/if}}
+  
+  <p>An optional paragraph:</p>
+  {{#if optext}}
+    <p>{{optext}}</p>
+  {{/if}}
+  
+  {{> footer}}
+</body>
+</html>

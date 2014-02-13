@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>{{=it.title}}</title>
+</head>
+<body>
+  <h1>{{=it.title}}</h1>
+  <p>A list of people:</p>
+  {{? it.people }}
+  <ul>
+  {{~ it.people :person }}
+    <li>{{=person}}</li>
+  {{~}}
+  </ul>
+  {{?}}
+  
+  <p>An optional paragraph:</p>
+  {{?it.optext}}
+    <p>{{=it.optext}}</p>
+  {{?}}
+  
+  {{#def.loadfile('footer.dot')}}
+</body>
+</html>
